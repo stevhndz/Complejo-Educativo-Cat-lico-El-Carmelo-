@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Complejo Educativo Católico El Carmelo</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial, sans-serif;
+background:#f7f3ee;
+color:#5c4738;
+}
+
+/* NAVBAR */
+
+nav{
+
+width:100%;
+
+position:fixed;
+
+top:0;
+left:0;
+
+z-index:1000;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:18px 60px;
+
+background:rgba(255,248,242,0.96);
+
+box-shadow:0 4px 10px rgba(0,0,0,0.08);
+
+}
+
+.logo{
+
+display:flex;
+align-items:center;
+gap:12px;
+
+}
+
+.logo img{
+
+width:55px;
+height:55px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+}
+
+.logo h1{
+
+font-size:28px;
+color:#6b4f3f;
+
+}
+
+nav ul{
+
+display:flex;
+
+list-style:none;
+
+gap:22px;
+
+flex-wrap:wrap;
+
+}
+
+nav ul li a{
+
+text-decoration:none;
+
+color:#6b4f3f;
+
+font-weight:bold;
+
+transition:0.3s;
+
+}
+
+nav ul li a:hover{
+
+color:#a57a5a;
+
+}
+
+/* HERO */
+
+.hero{
+
+height:100vh;
+
+background:
+linear-gradient(rgba(65,50,40,0.60), rgba(65,50,40,0.60)),
+url('actividad7.jpeg');
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+
+justify-content:center;
+align-items:center;
+
+text-align:center;
+
+padding:20px;
+
+color:white;
+
+}
+
+.hero-text{
+
+max-width:850px;
+
+}
+
+.hero-text h2{
+
+font-size:70px;
+
+margin-bottom:20px;
+
+}
+
+.hero-text p{
+
+font-size:22px;
+
+line-height:1.8;
+
+margin-bottom:35px;
+
+}
+
+.btn{
+
+display:inline-block;
+
+padding:16px 35px;
+
+background:#a57a5a;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:40px;
+
+transition:0.3s;
+
+}
+
+.btn:hover{
+
+background:#8c6548;
+
+}
+
+/* GENERAL */
+
+section{
+
+padding:110px 70px;
+
+}
+
+.titulo{
+
+text-align:center;
+
+margin-bottom:60px;
+
+}
+
+.titulo h2{
+
+font-size:50px;
+
+margin-bottom:15px;
+
+color:#6b4f3f;
+
+}
+
+.titulo p{
+
+font-size:18px;
+
+color:#7b6557;
+
+}
+
+/* CARDS */
+
+.cards{
+
+display:flex;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:30px;
+
+}
+
+.card{
+
+width:320px;
+
+background:white;
+
+padding:30px;
+
+border-radius:22px;
+
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+transition:0.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.card h3{
+
+margin-bottom:15px;
+
+color:#8c6548;
+
+}
+
+.card p{
+
+line-height:1.9;
+
+}
+
+/* SECCIONES */
+
+.avisos,
+.cumples,
+.reglamento,
+.logros{
+
+background:#ede2d4;
+
+}
+
+/* EVANGELIO */
+
+.evangelio-box{
+
+max-width:900px;
+
+margin:auto;
+
+background:white;
+
+padding:50px;
+
+border-radius:25px;
+
+text-align:center;
+
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+.evangelio-box h3{
+
+font-size:35px;
+
+margin-bottom:20px;
+
+color:#8c6548;
+
+}
+
+.evangelio-box p{
+
+font-size:20px;
+
+line-height:2;
+
+}
+
+/* CUMPLEAÑOS */
+
+.lista-cumples{
+
+max-width:700px;
+
+margin:auto;
+
+}
+
+.cumple{
+
+background:white;
+
+padding:25px;
+
+border-radius:18px;
+
+margin-bottom:20px;
+
+display:flex;
+
+justify-content:space-between;
+
+box-shadow:0 5px 10px rgba(0,0,0,0.08);
+
+}
+
+/* GALERÍA */
+
+.galeria-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:20px;
+
+}
+
+.galeria-grid img{
+
+width:100%;
+
+height:300px;
+
+object-fit:cover;
+
+border-radius:20px;
+
+transition:0.3s;
+
+}
+
+.galeria-grid img:hover{
+
+transform:scale(1.03);
+
+}
+
+/* UBICACIÓN */
+
+.ubicacion-box{
+
+background:white;
+
+padding:40px;
+
+border-radius:25px;
+
+max-width:900px;
+
+margin:auto;
+
+line-height:2;
+
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+text-align:center;
+
+}
+
+/* CONTACTO */
+
+.contact-container{
+
+display:flex;
+
+justify-content:center;
+
+gap:50px;
+
+flex-wrap:wrap;
+
+}
+
+.contact-info{
+
+max-width:400px;
+
+}
+
+.contact-info h3{
+
+font-size:35px;
+
+margin-bottom:20px;
+
+color:#8c6548;
+
+}
+
+.contact-info p{
+
+margin-bottom:15px;
+
+line-height:2;
+
+}
+
+.contact-form{
+
+width:500px;
+
+display:flex;
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+.contact-form input,
+.contact-form textarea{
+
+padding:18px;
+
+border:none;
+
+border-radius:18px;
+
+background:#ede2d4;
+
+font-size:16px;
+
+}
+
+.contact-form textarea{
+
+height:170px;
+
+resize:none;
+
+}
+
+.contact-form button{
+
+padding:18px;
+
+border:none;
+
+border-radius:35px;
+
+background:#a57a5a;
+
+color:white;
+
+font-size:18px;
+
+cursor:pointer;
+
+transition:0.3s;
+
+}
+
+.contact-form button:hover{
+
+background:#8c6548;
+
+}
+
+/* FOOTER */
+
+footer{
+
+background:#d8c3ad;
+
+padding:30px;
+
+text-align:center;
+
+color:#5c4738;
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+nav{
+
+flex-direction:column;
+
+gap:20px;
+
+padding:20px;
+
+}
+
+nav ul{
+
+justify-content:center;
+
+}
+
+.hero-text h2{
+
+font-size:45px;
+
+}
+
+.hero-text p{
+
+font-size:18px;
+
+}
+
+section{
+
+padding:90px 25px;
+
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">
+
+<img src="logo.jpeg">
+
+<h1>El Carmelo</h1>
+
+</div>
+
+<ul>
+
+<li><a href="#inicio">Inicio</a></li>
+<li><a href="#avisos">Avisos</a></li>
+<li><a href="#evangelio">Evangelio</a></li>
+<li><a href="#cumples">Cumpleaños</a></li>
+<li><a href="#galeria">Galería</a></li>
+<li><a href="#logros">Logros</a></li>
+<li><a href="#reglamento">Reglamento</a></li>
+<li><a href="#ubicacion">Ubicación</a></li>
+<li><a href="#contacto">Contacto</a></li>
+
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero" id="inicio">
+
+<div class="hero-text">
+
+<h2>Complejo Educativo El Carmelo</h2>
+
+<p>
+Bienvenidos al portal informativo oficial
+de nuestra institución educativa.
+Aquí encontrarás avisos importantes,
+actividades escolares, evangelio del día,
+cumpleaños y mucho más.
+</p>
+
+<a href="#avisos" class="btn">
+Ver Información
+</a>
+
+</div>
+
+</section>
+
+<!-- AVISOS -->
+
+<section class="avisos" id="avisos">
+
+<div class="titulo">
+
+<h2>Avisos Importantes</h2>
+
+<p>Información importante para estudiantes y padres de familia</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<h3> Feria de Logros</h3>
+
+<p>
+Inicio de Feria de Logros a partir de 6 de octubre de 2026 hasta 9 de octubre de 2026
+</p>
+
+</div>
+
+<div class="card">
+
+<h3> Examen de Admisión </h3>
+
+<p>
+Examen de nuevo ingreso para parvularia dia 3 de octubre de 2026
+</p>
+
+</div>
+
+<div class="card">
+
+<h3> Inicio del mes misionero</h3>
+
+<p>
+Campaña económica para las Misiones Carmelitanas.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- EVANGELIO -->
+
+<section id="evangelio">
+
+<div class="titulo">
+
+<h2>Evangelio del Día</h2>
+
+<p>Reflexión para nuestra comunidad educativa</p>
+
+</div>
+
+<div class="evangelio-box">
+
+<h3>San Lucas 10, 38-42</h3>
+
+<p>
+“Marta, Marta, te preocupas y te agitas por muchas cosas; y hay necesidad de pocas, o mejor, de una sola. María ha elegido la parte buena, que no le será quitada.”
+</p>
+
+</div>
+
+</section>
+
+<!-- CUMPLEAÑOS -->
+
+<section class="cumples" id="cumples">
+
+<div class="titulo">
+
+<h2>Cumpleañeros</h2>
+
+<p>Celebramos a nuestros estudiantes y docentes</p>
+
+</div>
+
+<div class="lista-cumples">
+
+<div class="cumple">
+
+<h3>Ricarado Campos</h3>
+
+<p>4 Octubre</p>
+
+</div>
+
+<div class="cumple">
+
+<h3>Rodrigo Godoy</h3>
+
+<p>6 Octubre</p>
+
+</div>
+
+<div class="cumple">
+
+<h3>Stephany Valladares</h3>
+
+<p>6 Octubre</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- GALERÍA -->
+
+<section id="galeria">
+
+<div class="titulo">
+
+<h2>Galería Institucional</h2>
+
+<p>Momentos especiales de nuestra institución</p>
+
+</div>
+
+<div class="galeria-grid">
+
+<img src="actividad1.jpeg">
+
+<img src="actividad2.jpeg">
+
+<img src="actividad3.jpeg">
+
+<img src="actividad5.jpeg">
+
+</div>
+
+</section>
+
+<!-- LOGROS -->
+
+<section class="logros" id="logros">
+
+<div class="titulo">
+
+<h2>Logros Institucionales</h2>
+
+<p>Reconocimientos y actividades destacadas</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<h3> Feria de logros</h3>
+
+<p>
+Nuestra institución obtuvo el primer lugar
+en la feria de logro municipal.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3> Deportes</h3>
+
+<p>
+Clasificación a las finales estudiantiles
+en competencias deportivas.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3> Excelencia Académica</h3>
+
+<p>
+Reconocimiento por alto rendimiento
+académico durante el año escolar.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- REGLAMENTO -->
+
+<section class="reglamento" id="reglamento">
+
+<div class="titulo">
+
+<h2>Reglamento Escolar</h2>
+
+<p>Normas institucionales para estudiantes</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<h3> Uniforme Escolar</h3>
+
+<p>
+Todos los estudiantes deben asistir
+con el uniforme completo, limpio y ordenado.
+No se permite alterar el uniforme institucional.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3> Presentación Personal</h3>
+
+<p>
+El cabello debe mantenerse limpio,
+ordenado y con corte formal.
+No se permiten estilos extravagantes
+ni tintes llamativos.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3> Maquillaje y Accesorios</h3>
+
+<p>
+Las estudiantes no deben asistir
+con maquillaje excesivo,
+uñas largas o accesorios llamativos.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3> Puntualidad</h3>
+
+<p>
+Todos los estudiantes deben ingresar
+puntualmente a clases y respetar
+los horarios establecidos.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3> Responsabilidad Académica</h3>
+
+<p>
+Cada estudiante debe portar
+sus materiales escolares y cumplir
+con tareas y actividades.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3> Respeto y Convivencia</h3>
+
+<p>
+Se debe mantener el respeto
+hacia compañeros, docentes
+y personal administrativo.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- UBICACIÓN -->
+
+<section id="ubicacion">
+
+<div class="titulo">
+
+<h2>Ubicación</h2>
+
+<p>Información institucional</p>
+
+</div>
+
+<div class="ubicacion-box">
+
+<p>
+ El Complejo Educativo Católico El Carmelo se encuentra ubicado sobre la Avenida Venecia, contiguo a la Carretera Panamericana, en la colonia Prados de Venecia I, municipio de Soyapango, San Salvador, El Salvador.
+</p>
+
+<p>
+Nuestra institución brinda educación
+basada en valores, disciplina
+y excelencia académica.
+</p>
+
+<p>
+Horario de atención:
+Lunes a Viernes de 7:00 AM a 4:00 PM.
+</p>
+
+</div>
+
+</section>
+
+<!-- CONTACTO -->
+
+<section id="contacto">
+
+<div class="titulo">
+
+<h2>Contáctanos</h2>
+
+<p>Estamos felices de ayudarte</p>
+
+</div>
+
+<div class="contact-container">
+
+<div class="contact-info">
+
+<h3>Complejo Educativo El Carmelo</h3>
+
+<p> San Salvador, El Salvador</p>
+
+<p> +503 6986-3982</p>
+
+<p> elcarmelo@gmail.com</p>
+
+</div>
+
+<div class="contact-form">
+
+<input type="text" id="nombre" placeholder="Tu nombre">
+
+<textarea id="mensaje" placeholder="Escribe tu mensaje"></textarea>
+
+<button onclick="enviarWhatsApp()">
+Enviar mensaje
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+
+function enviarWhatsApp(){
+
+let nombre = document.getElementById("nombre").value;
+
+let mensaje = document.getElementById("mensaje").value;
+
+let telefono = "50369863982";
+
+let url = "https://wa.me/" + telefono + "?text="
++ encodeURIComponent(
+"Hola, soy " + nombre + ". " + mensaje
+);
+
+window.open(url, "_blank");
+
+}
+
+</script>
+
+<!-- REPRODUCTOR DE MÚSICA DE FONDO -->
+<audio id="musicaFondo" loop preload="auto">
+    <source src="Flor del carmelo.mp3"" type="audio/mpeg">
+    Tu navegador no soporta el elemento de audio.
+</audio>
+
+<script>
+    window.addEventListener('load', function() {
+        var audio = document.getElementById('musicaFondo');
+        audio.volume = 0.5; // Volumen al 50%
+
+        var promesa = audio.play();
+        if (promesa !== undefined) {
+            promesa.catch(function() {
+                var iniciar = function() {
+                    audio.play();
+                    window.removeEventListener('click', iniciar);
+                    window.removeEventListener('touchstart', iniciar);
+                    window.removeEventListener('keydown', iniciar);
+                };
+                window.addEventListener('click', iniciar);
+                window.addEventListener('touchstart', iniciar);
+                window.addEventListener('keydown', iniciar);
+            });
+        }
+    });
+</script>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+Complejo Educativo El Carmelo ©️ 2026
+</p>
+
+</footer>
+
+</body>
+</html>
